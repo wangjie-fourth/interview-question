@@ -1,0 +1,339 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>MySQL · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../system-design/Index.html" />
+    
+    
+    <link rel="prev" href="../Spring/Index.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../java/Index.html">
+            
+                <a href="../java/Index.html">
+            
+                    
+                    java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../JVM/GC.html">
+            
+                <a href="../JVM/GC.html">
+            
+                    
+                    JVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Spring/Index.html">
+            
+                <a href="../Spring/Index.html">
+            
+                    
+                    Spring相关问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="Index.html">
+            
+                <a href="Index.html">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../system-design/Index.html">
+            
+                <a href="../system-design/Index.html">
+            
+                    
+                    系统设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../secret/Index.html">
+            
+                <a href="../secret/Index.html">
+            
+                    
+                    加密相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >MySQL</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7D22;&#x5F15;&#x76F8;&#x5173;">&#x7D22;&#x5F15;&#x76F8;&#x5173;</h1>
+<p>1&#x3001;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x67D0;&#x4E2A;&#x8868;&#x7684;<code>city</code>&#x5B57;&#x6BB5;&#x4E3A;&#x4E0A;&#x6D77;&#x7684;&#x6570;&#x636E;&#x6709;490W&#x6761;&#xFF0C;&#x4E3A;&#x5317;&#x4EAC;&#x7684;&#x6570;&#x636E;&#x6709;10W&#x6761;&#xFF0C;&#x73B0;&#x5728;&#x6839;&#x636E;<code>city</code>&#x53BB;&#x67E5;&#x4E0A;&#x6D77;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4F1A;&#x4E0D;&#x4F1A;&#x8D70;&#x7D22;&#x5F15;&#x5440;&#xFF1F;&#x5047;&#x8BBE;<code>city</code>&#x662F;&#x5EFA;&#x7ACB;&#x7D22;&#x5F15;&#x7684;
+&#x5E76;&#x4E0D;&#x4F1A;&#x8D70;&#x7D22;&#x5F15;&#x3002;
+&#x5E76;&#x4E0D;&#x662F;&#x6240;&#x6709;&#x7D22;&#x5F15;&#x5BF9;&#x67E5;&#x8BE2;&#x90FD;&#x6709;&#x6548;&#xFF0C;<code>SQL</code>&#x662F;&#x6839;&#x636E;&#x8868;&#x4E2D;&#x6570;&#x636E;&#x6765;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#x4F18;&#x5316;&#x7684;&#xFF0C;&#x5F53;&#x7D22;&#x5F15;&#x5217;&#x6709;&#x5927;&#x91CF;&#x6570;&#x636E;&#x91CD;&#x590D;&#x65F6;,&#x67E5;&#x8BE2;&#x53EF;&#x80FD;&#x4E0D;&#x4F1A;&#x53BB;&#x5229;&#x7528;&#x7D22;&#x5F15;&#xFF0C;&#x5982;&#x4E00;&#x8868;&#x4E2D;&#x6709;&#x5B57;&#x6BB5;<code>sex</code>&#xFF0C;<code>male</code>&#x3001;<code>female</code>&#x51E0;&#x4E4E;&#x5404;&#x4E00;&#x534A;&#xFF0C;&#x90A3;&#x4E48;&#x5373;&#x4F7F;&#x5728;<code>sex</code>&#x4E0A;&#x5EFA;&#x4E86;&#x7D22;&#x5F15;&#x4E5F;&#x5BF9;&#x67E5;&#x8BE2;&#x6548;&#x7387;&#x8D77;&#x4E0D;&#x4E86;&#x4F5C;&#x7528;&#x3002; </p>
+<p>2&#x3001;&#x5982;&#x679C;&#x663E;&#x793A;&#x6307;&#x5B9A;&#x4E3B;&#x952E;&#x7684;&#x8BDD;&#xFF0C;<code>MySQL</code>&#x4F1A;&#x600E;&#x4E48;&#x505A;&#xFF1F;</p>
+<ul>
+<li>&#x5224;&#x65AD;&#x8868;&#x4E2D;&#x662F;&#x5426;&#x6709;&#x975E;&#x7A7A;&#x7684;&#x6574;&#x5F62;&#x552F;&#x4E00;&#x7D22;&#x5F15;,&#x5982;&#x679C;&#x6709;,&#x5219;&#x8BE5;&#x5217;&#x4E3A;&#x4E3B;&#x952E;(&#x8FD9;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>select _rowid from table</code>&#x67E5;&#x8BE2;&#x5230;&#x4E3B;&#x952E;&#x5217;)</li>
+<li>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x5219;&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;6&#x5B57;&#x8282;&#x7684;&#x4E3B;&#x952E;(&#x8BE5;&#x4E3B;&#x952E;&#x662F;&#x67E5;&#x4E0D;&#x5230;&#x7684;)</li>
+</ul>
+<h1 id="&#x60B2;&#x89C2;&#x9501;&#x4E0E;&#x4E50;&#x89C2;&#x9501;">&#x60B2;&#x89C2;&#x9501;&#x4E0E;&#x4E50;&#x89C2;&#x9501;</h1>
+<p>1&#x3001;&#x4EC0;&#x4E48;&#x53EB;&#x505A;&#x60B2;&#x89C2;&#x9501;&#x3001;&#x4E50;&#x89C2;&#x9501;
+&#x60B2;&#x89C2;&#x9501;&#xFF1A;&#x5047;&#x5B9A;&#x4F1A;&#x53D1;&#x751F;&#x5E76;&#x53D1;&#x51B2;&#x7A81;&#xFF0C;&#x5C4F;&#x853D;&#x4E00;&#x5207;&#x53EF;&#x80FD;&#x8FDD;&#x53CD;&#x6570;&#x636E;&#x5B8C;&#x6574;&#x6027;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x6BD4;&#x5982;&#x8BF4;&#xFF1A;&#x6BCF;&#x6B21;&#x53BB;&#x62FF;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#x90FD;&#x8BA4;&#x4E3A;&#x522B;&#x4EBA;&#x4F1A;&#x4FEE;&#x6539;&#xFF0C;&#x6240;&#x4EE5;&#x6BCF;&#x6B21;&#x5728;&#x62FF;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#x90FD;&#x4F1A;&#x4E0A;&#x9501;&#xFF0C;&#x8FD9;&#x6837;&#x522B;&#x4EBA;&#x60F3;&#x62FF;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x5C31;&#x4F1A;block
+&#x4E50;&#x89C2;&#x9501;&#xFF1A;&#x5047;&#x8BBE;&#x4E0D;&#x4F1A;&#x53D1;&#x751F;&#x5E76;&#x53D1;&#x51B2;&#x7A81;&#xFF0C;&#x53EA;&#x5728;&#x63D0;&#x4EA4;&#x64CD;&#x4F5C;&#x65F6;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x8FDD;&#x53CD;&#x6570;&#x636E;&#x5B8C;&#x6574;&#x6027;&#x3002;&#x6BCF;&#x6B21;&#x53BB;&#x62FF;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#x90FD;&#x8BA4;&#x4E3A;&#x522B;&#x4EBA;&#x4E0D;&#x4F1A;&#x4FEE;&#x6539;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x4F1A;&#x4E0A;&#x9501;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x63D0;&#x4EA4;&#x66F4;&#x65B0;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x5224;&#x65AD;&#x4E00;&#x4E0B;&#x5728;&#x6B64;&#x671F;&#x95F4;&#x522B;&#x4EBA;&#x6709;&#x6CA1;&#x6709;&#x53BB;&#x66F4;&#x65B0;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x3002;&#x4E50;&#x89C2;&#x9501;&#x9002;&#x7528;&#x4E8E;&#x8BFB;&#x591A;&#x5199;&#x5C11;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x63D0;&#x9AD8;&#x541E;&#x5410;&#x91CF;&#x3002;</p>
+<p>2&#x3001;&#x4F7F;&#x7528;&#x60B2;&#x89C2;&#x9501;&#x3001;&#x4E50;&#x89C2;&#x9501;&#x53BB;&#x8BA9;<code>number</code> + 1
+&#xFF08;1&#xFF09;&#x60B2;&#x89C2;&#x9501;</p>
+<pre><code class="lang-java">SELECT * FROM table_a WHERE id=1 FOR UPDATE;
+UPDATE table_a SET number=number-1 WHERE product_id=1;
+# &#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x5B8C;&#x540E;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x9501;&#x7684;
+</code></pre>
+<p>&#xFF08;2&#xFF09;&#x4E50;&#x89C2;&#x9501;</p>
+<pre><code class="lang-java">SELECT * FROM table_a WHERE id=1; # &#x67E5;&#x51FA;&#x6B64;&#x65F6;number&#x503C;&#x4E3A;5
+UPDATE table_a SET number=number-1 WHERE id=1 and number =5;
+</code></pre>
+<blockquote>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7248;&#x672C;&#x9501;&#x6216;&#x8005;&#x65F6;&#x95F4;&#x6233;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x5B9E;&#x73B0;</p>
+</blockquote>
+<p><a href="https://www.jianshu.com/p/f5ff017db62a" target="_blank">https://www.jianshu.com/p/f5ff017db62a</a></p>
+<h1 id="&#x4E8B;&#x52A1;">&#x4E8B;&#x52A1;</h1>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Spring/Index.html" class="navigation navigation-prev " aria-label="Previous page: Spring相关问题">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../system-design/Index.html" class="navigation navigation-next " aria-label="Next page: 系统设计">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"MySQL","level":"1.5","depth":1,"next":{"title":"系统设计","level":"1.6","depth":1,"path":"system-design/Index.md","ref":"system-design/Index.md","articles":[]},"previous":{"title":"Spring相关问题","level":"1.4","depth":1,"path":"Spring/Index.md","ref":"Spring/Index.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MySQL/Index.md","mtime":"2021-03-10T06:52:00.205Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-27T17:18:24.948Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
